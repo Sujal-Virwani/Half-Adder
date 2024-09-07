@@ -1,0 +1,18 @@
+module Half_Adder_TB;
+  reg in_a,in_b;
+  wire sum,carry;
+  Half_Adder HA1(sum,carry,in_a,in_b);
+  initial
+    begin
+      #10; in_a=0;in_b=0;
+      #10; in_a=0;in_b=1;
+      #10; in_a=1;in_b=0;
+      #10; in_a=1;in_b=1;
+      #10; $stop;
+    end
+  initial
+    begin
+      $dumpfile("dump.vcd");
+      $dumpvars(1);
+    end
+endmodule
