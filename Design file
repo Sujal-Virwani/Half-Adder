@@ -1,0 +1,6 @@
+module Half_Adder(sum,carry,in_a,in_b);
+  input in_a,in_b;
+  output reg sum,carry;
+  assign sum=in_a^in_b;
+  assign carry=in_a&in_b;
+endmodule
